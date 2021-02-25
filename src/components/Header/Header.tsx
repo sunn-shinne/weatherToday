@@ -9,7 +9,7 @@ interface propsType {
 
 const Header = (props: propsType) => {
   return(
-    <div className = 'container' style={{padding: 0}}>
+    <div className = 'container' >
       <div className = 'row'>
 
         <div className = 'col-12 text-center justify-content-center col-sm-5 justify-content-sm-start  col-lg-4' >

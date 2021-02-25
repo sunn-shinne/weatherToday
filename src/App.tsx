@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.scss';
 import Header from "./components/Header/Header";
+import RangeTabs from "./components/UI/RangeSwitch/RangeTabs";
 
 let chooseBgColor = function (): string {
   const now = new Date()
@@ -26,8 +27,9 @@ function App() {
   const appClass = `App ${bgColor}`
 
   return (
-    <div className = {appClass}>
+    <div className = {appClass} style={{padding: 0}}>
       <Header typeOfLogoIcon={bgColor}/>
+      <RangeTabs/>
     </div>
   );
 }
