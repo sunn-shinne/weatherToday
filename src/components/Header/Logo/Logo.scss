@@ -1,19 +1,24 @@
+@import 'src/assets/styles/base.scss';
+
 .Logo {
     font-family: 'Questrial', sans-serif;
-    font-size: 30px;
-    display: flex;
+    font-size: 1.5rem;
+    
+    @media (min-width: 576px) {
+        font-size: 1.7rem;
+    }
 
     img {
         width: 40px;
         height: 40px;
-        box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.2);
+        box-shadow: $box-shadow;
     }
 
     .appName {
         margin: 0;
         padding-top: 5px;
         padding-left: 10px;
-        text-shadow: 5px 8px 15px rgba(0, 0, 0, 0.2);
+        text-shadow: $box-shadow;
 
         &.white {
             color: white;

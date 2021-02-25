@@ -1,9 +1,11 @@
+@import 'assets/styles/base';
+
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #575757;
+  color: $text-color;
   box-sizing: border-box;
 }
 

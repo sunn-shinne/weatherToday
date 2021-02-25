@@ -1,32 +1,17 @@
-.LangToggle {
-  width: 70%;
-  height: 100%;
-  margin-top: 8px;
-}
+/* Error: Can't find stylesheet to import.
+ *   ,
+ * 1 | @import 'src/assets/styles/base.scss';
+ *   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   LangToggle.scss 1:9  root stylesheet */
 
-input[type=checkbox] {
-  width: 100%;
-  height: 35px;
-  background: white;
-  -webkit-appearance: none;
-  outline: none;
-  transition: 0.4s;
-  border: 1px solid #A4A4A4;
-  box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @import 'src/assets/styles/base.scss';\d\a   \2502          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   LangToggle.scss 1:9  root stylesheet";
 }
-
-input:checked[type=checkbox] {
-  background: #8B69AC;
-}
-
-input[type=checkbox]::before {
-  position: absolute;
-  content: "";
-  left: 0;
-  width: 35px;
-  height: 35px;
-  border: 1px solid #2C2C2C;
-}
-
-/*# sourceMappingURL=LangToggle.css.map */

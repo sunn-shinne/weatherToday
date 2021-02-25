@@ -5,8 +5,8 @@ const LangToggle = () => {
   return(
     <div className='LangToggle'>
       <input type='checkbox' className='Toggle-button'/>
-      <span className='onEng'>ENG</span>
-      <span className='onRus'>RUS</span>
+      <label className='onEng'>en</label>
+      <label className='onRus'>ru</label>
     </div>
   )
 }

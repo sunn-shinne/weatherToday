@@ -33,7 +33,7 @@ const Logo = (props: propsType) => {
 
 
   return(
-    <div className = 'Logo'>
+    <div className = 'Logo d-flex justify-content-center justify-content-sm-start'>
       <img src={imgTheme} alt='#'/>
       <p className = {appNameClass}>WeatherToday</p>
     </div>
