@@ -1,24 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import './App.scss';
+import Header from "./components/Header/Header";
+
+let chooseBgColor = function (): string {
+  const now = new Date()
+  const hours = now.getHours()
+
+  if (hours >= 0 && hours < 6) {
+    return 'night'
+  }
+  if (hours >= 6 && hours < 12) {
+    return 'morning'
+  }
+  if (hours >= 12 && hours < 18) {
+    return 'afternoon'
+  }
+  if (hours >= 18 && hours < 24) {
+    return 'evening'
+  }
+  return 'afternoon'
+}
 
 function App() {
+  const [bgColor,] = useState(chooseBgColor())
+  const appClass = `App ${bgColor}`
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className = {appClass}>
+      <Header typeOfLogoIcon={bgColor}/>
     </div>
   );
 }
